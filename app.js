@@ -11,7 +11,6 @@ form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const nameInput = document.getElementById('name');
-    const genderInput = document.querySelector('input[name="gender"]:checked');
 
     try {
         const response = await fetch(`https://api.genderize.io/?name=${nameInput.value}`);
@@ -36,8 +35,6 @@ function displayResult(data) {
         predictionParagraph.textContent = 'Prediction: No prediction available for the entered name.';
         saveResultButton.onclick = null; // Disable the saveResultButton if no prediction
 
-        // Optionally, you can also add further error styling or handling
-        // based on your design requirements.
     }
 }
 
@@ -70,7 +67,6 @@ function saveResult() {
 
         answersList.appendChild(savedAnswerItem);
     } else {
-        // Handle the case where the user hasn't selected a gender
         alert('Please select a gender before saving.');
     }
 }

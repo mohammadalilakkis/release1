@@ -1,8 +1,10 @@
+/* Reset some default styles and set the font family */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
 }
 
+/* Styling for the background container */
 .background-container {
     background: url('back.png') no-repeat center center fixed;
     background-size: cover;
@@ -12,38 +14,43 @@ body {
     justify-content: center;
 }
 
+/* Styling for the main content container */
 .container {
     position: relative;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.8); /* White content box */
+    background: rgba(255, 255, 255, 0.8); /* White content box with some transparency */
     padding: 20px;
-    border-radius: 10px; /* Optional: Add rounded corners */
+    border-radius: 10px; /* Add rounded corners */
 }
 
+/* Styling for the form within the container */
 form {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
+/* Styling for buttons in the form */
 button {
     margin-top: 10px;
 }
 
+/* Styling for elements with IDs 'result' and 'savedAnswers' */
 #result, #savedAnswers {
-    display: none;
+    display: none; /* Initially hide these elements */
 }
 
-/* Add styling for the Clear Data button */
+/* Styling for the Clear Data button */
 #clearData {
     margin-top: 10px;
     padding: 8px 16px;
-    background-color: #f0f2f0; /* Green color, you can change this */
-    color: #0c0c0c;
+    background-color: #f0f2f0; /* Greenish background color */
+    color: #0c0c0c; /* Dark text color */
     border: none;
     cursor: pointer;
 }
 
+/* Hide elements with the 'hidden' class */
 .hidden {
     display: none;
 }
